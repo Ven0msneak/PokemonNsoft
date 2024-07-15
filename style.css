@@ -1,0 +1,46 @@
+#map
+{
+	width:680px;
+	height:480px;
+	background-color: red;
+	background-image: url('Maps/overworld20.png');
+}
+
+#spritecontainer
+{
+	position: relative;
+	top:20px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+#buttons
+{
+	padding: 20px;
+}
+
+#enemy
+{
+	width:96px;
+	height: 96px;
+	margin: auto;
+}
+
+#show {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#pokemonFound
+{
+	text-align: center;
+}
