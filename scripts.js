@@ -34,57 +34,41 @@ function moveUp()
     searchEnemy()
 }
 
-function moveDown()
-{
+function move(direction) {
     let currentTop = parseInt(window.getComputedStyle(sprite).top, 10);
-    
+    let currentLeft = parseInt(window.getComputedStyle(sprite).left, 10);
 
-    if (currentTop === 430)
-    {
-    	btnDown.disabled = true;
+    switch (direction) {
+        case 'up':
+            if (currentTop > 0) {
+                sprite.style.top = (currentTop - 10) + 'px';
+            }
+            break;
+        case 'down':
+            if (currentTop < 430) { // Adjust based on your boundary
+                sprite.style.top = (currentTop + 10) + 'px';
+            }
+            break;
+        case 'left':
+            if (currentLeft > 0) {
+                sprite.style.left = (currentLeft - 10) + 'px';
+            }
+            break;
+        case 'right':
+            if (currentLeft < 640) { // Adjust based on your boundary
+                sprite.style.left = (currentLeft + 10) + 'px';
+            }
+            break;
     }
 
-    if (currentTop === 0 )
-    { 
-    	btnUp.disabled = false; 
-    }
-
-    sprite.style.top = (currentTop + 10) + 'px';
+    updateButtonState(currentTop, currentLeft);
     searchEnemy();
 }
 
-function moveLeft()
-{
-    let currentLeft = parseInt(window.getComputedStyle(sprite).left, 10);
-    sprite.style.left = (currentLeft - 10) + 'px';
-    if (currentLeft === 0 )
-    {
-    	btnLeft.disabled = true;
-    }
-
-    if (currentLeft <= 650) 
-    { 
-    	btnRight.disabled = false; 
-    }
-    searchEnemy()
+function updateButtonState(currentTop, currentLeft) {
+    btnUp.disabled = currentTop === 10;
+    btnDown.disabled = currentTop >= 430;
+    btnLeft.disabled = currentLeft <= 0;
+    btnRight.disabled = currentLeft >= 640;
 }
-
-function moveRight()
-{
-	let currentLeft = parseInt(window.getComputedStyle(sprite).left, 10);
-    sprite.style.left = (currentLeft + 10) + 'px';
-
-    if (currentLeft === 640)
-    {
-    	btnRight.disabled = true;
-    }
-
-    if (currentLeft <= 0)
-    { 
-    	btnLeft.disabled = false; 
-    }
-    searchEnemy()
-}
-
-
 
