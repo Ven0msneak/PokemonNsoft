@@ -4,7 +4,7 @@ var pokemon = [
     { name: "qwilfish", src: "Pokemon/qwilfish.png" },
     { name: "diglett", src: "Pokemon/diglett.png" },
     { name: "shelmet", src: "Pokemon/shelmet.png" },
-    { name: "Couldn't find anything.", src: "Pokemon/pokeball-n.jpg" }  // Example of an empty Pokémon
+    { name: "Couldn't find anything.", src: "Pokemon/pokeball-n.png" }  // Example of an empty Pokémon
 ];
 
 function searchEnemy()
