@@ -16,7 +16,7 @@ const pokemon = [
     },
 ];
 
-function choosePokemon(pokemonName)
+function pick(pokemonName)
 {
 var selectedPokemon = pokemon.find ( poke => poke.name === pokemonName );
 if (selectedPokemon)
