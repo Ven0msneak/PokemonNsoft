@@ -21,7 +21,7 @@ function choosePokemon(pokemonName)
 var selectedPokemon = pokemon.find ( poke => poke.name === pokemonName );
 if (selectedPokemon)
 {
-    localStorage.setItem('starterPokemon', JSON.stringify(selectedPokemon);
+    localStorage.setItem('starterPokemon', JSON.stringify(selectedPokemon));
 
     selectedPokemonElement.innerHTML = `
       <h2>Selected Pokémon: ${selectedPokemon.name}</h2>
