@@ -18,7 +18,7 @@ const pokemon = [
 
 function choosePokemon(pokemonName)
 {
-var selectedPokemon = pokemon.find ( poke => poke.name ==== pokemonName );
+var selectedPokemon = pokemon.find ( poke => poke.name === pokemonName );
 if (selectedPokemon)
 {
     localStorage.setItem('starterPokemon', JSON.stringify(selectedPokemon);
